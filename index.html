@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="main.js" defer></script>
     <title>SQDC</title>
 </head>
 
@@ -11,30 +12,90 @@
         <section id="safety">
             <h2>Seguridad</h2>
             <div >
-                <form>
-                <legend>Registro de evento inseguro</legend>
-                
+                <form id="safety-form">
+                <fieldset>
+                    <legend>Registro de evento inseguro</legend>
+                <br>
                 <div>
-                    <label for="empleado-id">Numero de empleado:</label>
-                    <input type="number" minlength="4" maxlength="4" required placeholder="0000" id="empleado-id">    
+                    <label for="safety-employeeId">Numero de empleado:</label>
+                    <input type="number" minlength="4" maxlength="4" required placeholder="0000" id="safety-employeeId">    
                 </div>
+                <br>
                 <div>
-                    <label for="empleado-nombre">Nombre de empleado:</label>
-                    <input type="text" placeholder="Nombre de empleado" id="empleado-nombre">
+                    <label for="safety-employeeName">Nombre de empleado:</label>
+                    <input type="text" placeholder="Nombre de empleado" id="safety-employeeName">
                 </div>
-
+                <br>
+                <div>
+                    <label for="safety-area">Area donde ocurrio el evento</label>
+                    <select name="safety_area_select" id="safety-area" required>
+                        <option value="na">selecciona el area:</option>
+                        <option value="area1">Area 1</option>
+                        <option value="area2">Area 2</option>
+                        <option value="area3">Area 3</option>
+                        <option value="area4">Area 4</option>
+                        <option value="area5">Area 5</option>
+                        <option value="area6">Area 6</option>
+                        <option value="area7">Area 7</option>
+                        <option value="area8">Area 8</option>
+                        <option value="area9">Area 9</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <label for="safety-supervisor">Supervisor a cargo:</label>
+                    <select name="supervisor" id="safety-supervisor">
+                        <option value="na">selecciona supervisor</option>
+                    <option value="supervisor1">supervisor1</option>
+                    <option value="supervisor2">supervisor2</option>
+                    <option value="supervisor3">supervisor3</option>
+                    <option value="supervisor4">supervisor4</option>
+                    <option value="supervisor5">supervisor5</option>
+                    <option value="supervisor6">supervisor6</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <label for="safety-shift">Turno:</label>
+                    <select name="shift" id="safety-shift">
+                        <option value="na">Selecciona el turno</option>
+                        <option value="1ero">Primer turno</option>
+                        <option value="2do">Segundo turno</option>
+                        <option value="3er">Tercer turno</option>
+                    </select>    
+                </div>
+                <br>
+                <div>
+                    <label for="safety-incidentCode">Tipo de incidente:</label>
+                    <select name="safety-incidentCode" id="safety-incidentCode">
+                        <option value="cortadura">cortadura</option>
+                        <option value="quemadura">quemadura</option>
+                        <option value="golpe">golpe</option>
+                        <option value="caida">caida</option>
+                        <option value="contaminacion">contaminacion</option>
+                        <option value="desgarre">desgarre</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <label for="safety-incidentDescription">Descripcion del incidente:</label>
+                    <br>
+                    <textarea name="Descripcion" id="safety-incidentDescription" cols="20" rows="10"></textarea>
+                </div>
+                </fieldset>
+                <button type="submit">Registrar</button>
                 </form>
             </div>
         </section>
-        <section id="quality">
+        <section id="quality" style="display: none;">
             <h2>Calidad</h2>
 
         </section>
-        <section id="delivery">
+        <section id="delivery" style="display: none;">
             <h2>Entrega</h2>
 
         </section>
-        <section id="cost">
+        <section id="cost" style="display: none;">
             <h2>Costo</h2>
         </section>
     </div>
