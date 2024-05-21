@@ -3,16 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
      <script src="main.js" defer></script>
     <title>SQDC</title>
 </head>
 
 <body>
-    <div class="contenedor">
+    <header>
+
+
+    </header>
+    <main class="container">
         <section id="safety">
             <h2>Seguridad</h2>
-            <div >
-                <form id="safety-form">
+            <h3>Registrar evento inseguro ></h3>
+            <div class="dataInput" >
+                <form id="safety-form" autocomplete="off">
                 <fieldset>
                     <legend>Registro de evento inseguro</legend>
                 <br>
@@ -34,11 +40,6 @@
                         <option value="area2">Area 2</option>
                         <option value="area3">Area 3</option>
                         <option value="area4">Area 4</option>
-                        <option value="area5">Area 5</option>
-                        <option value="area6">Area 6</option>
-                        <option value="area7">Area 7</option>
-                        <option value="area8">Area 8</option>
-                        <option value="area9">Area 9</option>
                     </select>
                 </div>
                 <br>
@@ -49,9 +50,6 @@
                     <option value="supervisor1">supervisor1</option>
                     <option value="supervisor2">supervisor2</option>
                     <option value="supervisor3">supervisor3</option>
-                    <option value="supervisor4">supervisor4</option>
-                    <option value="supervisor5">supervisor5</option>
-                    <option value="supervisor6">supervisor6</option>
                     </select>
                 </div>
                 <br>
@@ -59,21 +57,18 @@
                     <label for="safety-shift">Turno:</label>
                     <select name="shift" id="safety-shift">
                         <option value="na">Selecciona el turno</option>
-                        <option value="1ero">Primer turno</option>
+                        <option value="1ro">Primer turno</option>
                         <option value="2do">Segundo turno</option>
-                        <option value="3er">Tercer turno</option>
                     </select>    
                 </div>
                 <br>
                 <div>
                     <label for="safety-incidentCode">Tipo de incidente:</label>
                     <select name="safety-incidentCode" id="safety-incidentCode">
-                        <option value="cortadura">cortadura</option>
-                        <option value="quemadura">quemadura</option>
-                        <option value="golpe">golpe</option>
-                        <option value="caida">caida</option>
-                        <option value="contaminacion">contaminacion</option>
-                        <option value="desgarre">desgarre</option>
+                        <option value="type1">Tipo 1</option>
+                        <option value="type2">Tipo 2</option>
+                        <option value="type3">Tipo 3</option>
+                        <option value="type4">Tipo 4</option>
                     </select>
                 </div>
                 <br>
@@ -82,11 +77,74 @@
                     <br>
                     <textarea name="Descripcion" id="safety-incidentDescription" cols="20" rows="10"></textarea>
                 </div>
+                <br>
+                <div class="button-box">
+                    <button type="submit" class="button">Registrar</button>
+                </div>
+                
                 </fieldset>
-                <button type="submit">Registrar</button>
                 </form>
             </div>
+            <div class="showData">
+                <h3> Gernerar listado ></h3>
+                <div>
+                        <form id="safetyFiltersForm">
+
+                            <fieldset>
+
+                            <legend>Filtrar por:</legend>
+
+                            <label for="filtro1">Area:</label>
+                           <select name="filtro1" id="filtro1">
+                                <option value="all">Todas</option>
+                                <option value="area1">Area 1</option>
+                                <option value="area2">Area 2</option>
+                                <option value="area3">Area 3</option>
+                                <option value="area4">Area 4</option>
+                            </select>
+                            
+                           <label for="filtro2">Turno:</label>
+                            <select name="filtro2" id="filtro2">
+                                <option value="all">Todos</option>
+                                <option value="1ro">1er turno</option>
+                                <option value="2do">2do turno</option>
+                            </select>
+
+            
+                            <label for="filtro3">Tipo de incidente:</label>
+                            <select name="filtro3" id="filtro3">
+                                <option value="all">Todos</option>
+                                <option value="type1">Tipo 1</option>
+                                <option value="type2">Tipo 2</option>
+                                <option value="type3">Tipo 3</option>
+                                <option value="type4">Tipo 4</option>
+                            </select>
+
+                            <button class="button" type="submit">generar</button>
+                            </fieldset>
+            
+                           
+            
+                        </form>
+                        <br>
+
+                        <table id="safety-table">
+                        <thead>
+                            <th>No. Empleado</th>
+                            <th>Nombre Empleado</th>
+                            <th>Area de incidente</th>
+                            <th>Supervisor</th>
+                            <th>Turno</th>
+                            <th>Tipo</th>
+                            <th>Descripcion</th>
+                        </thead>
+                        <tbody id="safety-table-body">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </section>
+        <!--        
         <section id="quality" style="display: none;">
             <h2>Calidad</h2>
 
@@ -98,7 +156,8 @@
         <section id="cost" style="display: none;">
             <h2>Costo</h2>
         </section>
-    </div>
+        -->
+    </main>
     
 </body>
 

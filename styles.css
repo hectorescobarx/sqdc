@@ -1,0 +1,33 @@
+/*Globales*/
+.button-box{
+    display: flex;
+    justify-content: center;
+}
+
+.button{
+    background-color: lightblue;
+    border-radius: 5px;
+}
+legend{
+    text-align: center;
+}
+h2{
+    text-align: center;
+    background-color: lightgreen;
+    color: black;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+#safety-table{ border: solid black 1pt;
+    border-collapse: collapse;
+
+}
+
+th, td{
+    border: solid black 1pt;
+    border-collapse: collapse;
+}
